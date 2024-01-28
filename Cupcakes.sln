@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cupcakes", "Cupcakes\Cupcakes.csproj", "{F57AFA2A-87CF-49F1-B3ED-868F525517EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F57AFA2A-87CF-49F1-B3ED-868F525517EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57AFA2A-87CF-49F1-B3ED-868F525517EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57AFA2A-87CF-49F1-B3ED-868F525517EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57AFA2A-87CF-49F1-B3ED-868F525517EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B17A2C4-5C4C-4D98-A937-F419EACFC37D}
+	EndGlobalSection
+EndGlobal
