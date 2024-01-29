@@ -2,6 +2,7 @@ using Cupcakes.Data;
 using Cupcakes.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel;
 
 namespace Cupcakes.Pages
 {
@@ -14,6 +15,7 @@ namespace Cupcakes.Pages
         public Cupcake Cupcake { get; set; } = new();
 
         [BindProperty]
+        [DisplayName("Upload Image")]
         public IFormFile FileUpload { get; set; }
         public CreateModel(ILogger<CreateModel> logger, IHostEnvironment environment)
         {

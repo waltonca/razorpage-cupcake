@@ -9,7 +9,7 @@
 <br />
 <p><a asp-page="Create" class="btn btn-secondary">Add New Cupcake</a></p>
 
-<div class="w-50">
+<div>
     <table class="table">
         <thead>
             <tr>
@@ -24,10 +24,10 @@
             @foreach (Cupcake cupcake in Model.cupcakes)
             {
                 <tr>
-                    <td><img src="/uploads/@cupcake.ImageFileName" class="img-fluid" /></td>
+                    <td><img src="/uploads/@cupcake.ImageFileName" class="img-fluid" style="width: 300px; height: 300px;" /></td>
                     <td>@cupcake.Name</td>
                     <td>@cupcake.Description</td>
-                    <td>@cupcake.Price</td>
+                    <td>$@cupcake.Price</td>
                     <td><a asp-page="Delete" asp-route-id="@cupcake.CupcakeId">Delete</a></td>
                 </tr>
             }

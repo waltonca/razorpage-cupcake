@@ -11,7 +11,7 @@
     <form method="post" enctype="multipart/form-data">
 
         <div class="mb-3">
-            <label for="FileUpload" class="form-label">Photo:</label><br>
+            <label asp-for="FileUpload" class="form-label"></label><br>
             <input asp-for="FileUpload" class="form-control" />
         </div>
 
@@ -31,7 +31,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Submit" class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="Add" class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp;
             <a asp-page="Index" class="btn btn-secondary">Cancel</a>
         </p>
     </form>
