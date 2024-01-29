@@ -23,7 +23,7 @@
             @foreach (Cupcake cupcake in Model.cupcakes)
             {
                 <tr>
-                    <td>thumbnail</td>
+                    <td><img src="/uploads/@cupcake.ImageFileName" class="img-fluid" /></td>
                     <td>@cupcake.Name</td>
                     <td>@cupcake.Description</td>
                     <td>@cupcake.Price</td>
