@@ -2,3 +2,22 @@
 @model Cupcakes.Pages.DeleteModel
 @{
 }
+
+<h1>Remove Cupcake</h1>
+
+<h2>Are you sure you want to remove this cupcake?</h2>
+
+<p><img src="/uploads/@Model.Cupcake.ImageFileName" class="img-fluid"</p>
+
+<div class="w-25">
+
+    <form method="post">
+        <input type="hidden" name="Cupcake.CupcakeId" value="@Model.Cupcake.CupcakeId" />
+        
+        <p>
+            <input type="submit" value="Delete" class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp;
+            <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+        </p>
+    </form>
+
+</div>

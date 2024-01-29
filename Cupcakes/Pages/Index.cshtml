@@ -17,6 +17,7 @@
                 <th>Name</th>
                 <th>Description</th>
                 <th>Price</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +28,7 @@
                     <td>@cupcake.Name</td>
                     <td>@cupcake.Description</td>
                     <td>@cupcake.Price</td>
+                    <td><a asp-page="Delete" asp-route-id="@cupcake.CupcakeId">Delete</a></td>
                 </tr>
             }
     </table>
