@@ -8,6 +8,9 @@ namespace Cupcakes.Pages
     public class CreateModel : PageModel
     {
         private readonly ILogger<CreateModel> _logger;
+
+        [BindProperty]
+        public Cupcake Cupcake { get; set; } = new();
         public CreateModel(ILogger<CreateModel> logger)
         {
             _logger = logger;
@@ -17,8 +20,10 @@ namespace Cupcakes.Pages
         {
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         {
+            DbContext.AddNewCupcake(Cupcake);
+            return RedirectToPage("/Index");
         }
     }
 }

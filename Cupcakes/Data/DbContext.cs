@@ -22,7 +22,7 @@ namespace Cupcakes.Data
             connection.Open();
 
             // Create Sql command to get all the cupcakes
-            string sql = "SELECT CupcakeId, Name, ImageFileName, Description, Price FROM Cupcake";
+            string sql = "SELECT CupcakeId, Name, ImageFileName, Description, Price FROM Cupcake ORDER BY Name";
 
             // Create command object to execute the query
             SqliteCommand cmd = connection.CreateCommand();

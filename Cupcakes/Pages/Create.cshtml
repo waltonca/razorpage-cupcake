@@ -2,3 +2,35 @@
 @model Cupcakes.Pages.CreateModel
 @{
 }
+
+<h1>Add New Cupcake</h1>
+<div class="w-25">
+
+    <!-- Add multipart/form-data to upload file(s) -->
+
+    <form method="post" enctype="multipart/form-data">
+
+        
+
+        <div class="mb-3">
+            <label for="Cupcake.Name" class="form-label">Name:</label><br>
+            <input asp-for="Cupcake.Name" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label for="Cupcake.Description">Description:</label><br>
+            <input asp-for="Cupcake.Description" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label for="Cupcake.Price">Price:</label><br>
+            <input asp-for="Cupcake.Price" class="form-control" />
+        </div>
+
+        <p>
+            <input type="submit" value="Submit" class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp;
+            <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+        </p>
+    </form>
+
+</div>
