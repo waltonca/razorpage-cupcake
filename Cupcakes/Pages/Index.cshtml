@@ -5,19 +5,25 @@
     ViewData["Title"] = "Home page";
 }
 
-<h1>Cupcakes</h1>
+<h1>Junxiao's Cupcakes</h1>
 
-<table>
+<table class="table">
     <thead>
         <tr>
+            <th></th>
             <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
         </tr>
     </thead>
     <tbody>
         @foreach (Cupcake cupcake in Model.cupcakes)
         {
             <tr>
+                <td>thumbnail</td>
                 <td>@cupcake.Name</td>
+                <td>@cupcake.Description</td>
+                <td>@cupcake.Price</td>
             </tr>
         }
 </table>

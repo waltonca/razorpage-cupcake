@@ -8,6 +8,7 @@ namespace Cupcakes.Data
     //
     public static class DbContext
     {
+        // Get all cupcakes from the database
         public static List<Cupcake> GetAllCupcakes()
         {
             List<Cupcake> cupcakes = new List<Cupcake>();
@@ -50,6 +51,36 @@ namespace Cupcakes.Data
             connection.Close();
 
             return cupcakes;
+        }   
+
+        // Add a new cupcake object to the database
+        public static void AddNewCupcake(Cupcake cupcake)
+        {
+            // Create connection to database
+            SqliteConnection connection = new SqliteConnection("Data Source=Data/cupcakes.db");
+            
+            // Open the connection
+            connection.Open();
+
+            // Create Sql command to add new cupcakes
+            // Use parameters to prevent SQL injection attacks
+            string sql = "INSERT INTO Cupcake (Name, ImageFileName, Description, Price) VALUES (@Name, @ImageFileName, @Description, @Price)";
+
+            // Create command object to execute the query
+            SqliteCommand cmd = connection.CreateCommand();
+            cmd.CommandText = sql;
+
+            // Add parameters to the command
+            cmd.Parameters.AddWithValue("@Name", cupcake.Name);
+            cmd.Parameters.AddWithValue("@ImageFileName", cupcake.ImageFileName);
+            cmd.Parameters.AddWithValue("@Description", cupcake.Description);
+            cmd.Parameters.AddWithValue("@Price", cupcake.Price);
+
+            // Execute the query
+            cmd.ExecuteNonQuery();
+
+            // Close the connection
+            connection.Close();
         }   
     }
 }
